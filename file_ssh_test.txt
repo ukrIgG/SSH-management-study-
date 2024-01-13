@@ -1,1 +1,35 @@
-Test SSH , local file
+# це мій файл config для роботи  OS_windows з SSH (~/.ssh/)
+# ukriggo@ukr.net => Personal private ssh identity for github.com
+# git remote add origin git@ghub:ukrIgG/SSH-management-study-.git
+# using alias ghub for ssh connetion 
+Host ghub 
+  HostName github.com 
+  User git 
+#  Port  - if using not default port 22, but other
+  IdentityFile ~/.ssh/IgGo_github
+  IdentitiesOnly yes   
+
+
+# ukriggo@ukr.net => Personal private ssh identity for gitlab.com  
+# git remote add origin git@glab:ukriggo/gitlab_SSH_connect.git 
+# using alias glab for ssh connetion
+Host glab 
+  HostName gitlab.com 
+  User git 
+#  Port  - if using not default port 22, but other
+  IdentityFile ~/.ssh/IgGo_gitlab
+  IdentitiesOnly yes 
+
+
+
+#--------------------------------------------------------------------
+
+# -- Template for other ssh connetion --- 
+# put comment-description for new ssh identity 
+#Host example 
+#  HostName  
+#  User git
+#  Port xxxx  
+#  IdentityFile ~/.ssh/ 
+#  IdentitiesOnly yes
+# -- END Template for other ssh connetion ---
